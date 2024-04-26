@@ -35,19 +35,19 @@ CMD [ "/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf" ]: This line specifies th
 
 Then, in the terminal, we need to run Docker commands to build and run the Docker container containing our game.
 
-### Command1 :-
+##### Command1 :-
 The command docker build -t 2048-games . builds a Docker image with the tag 2048-games using the Dockerfile located in the current directory (.).
 
-### command2 :-
+##### command2 :-
 The command docker image ls is used to list Docker images stored on your local system. It provides information such as the repository, tag, image ID, and creation time for each image.
 
-### Command3 :-
+##### Command3 :-
 The command docker run -d -p 80:80 <image_id> runs a Docker container in detached mode (-d), forwarding port 80 from the host to port 80 in the container (-p 80:80), using the specified Docker image (`
 
 ### Step10 :- 
 Open Google Chrome and navigate to localhost:80 to access the game running locally.
 
-### Screenshot of 2048-Game
+### This is a screenshot of the 2048-Game running on localhost:8080.
 
 ![image](https://github.com/satyamaatmdeep10/Game-2048/assets/137147966/0219d5f4-b2a5-42ff-936c-3e4b69502069)
 
@@ -55,7 +55,7 @@ Open Google Chrome and navigate to localhost:80 to access the game running local
 ### Step11 :-
  To deploy your Docker container to Azure app service:- 
  
- ### Step A. 
+ #### Step A. 
  Prepare Docker Image: Push your Docker image to a container registry that Azure App Service can access. so first we have created Azure Container Registry and the Steps are:- 
  Create an Azure Container Registry: Go to the Azure portal, navigate to "Create a resource" > "Containers" > "Azure Container Registry" and follow the prompts to create a new registry.
  Login On your local machine.
@@ -70,7 +70,7 @@ Open Google Chrome and navigate to localhost:80 to access the game running local
 
 ![image](https://github.com/satyamaatmdeep10/Game-2048/assets/137147966/841158c4-ffd1-4334-999f-1a5b3ae23e5b)
 
-### Step B
+#### Step B
 Create an App Service:
 1) Go to the Azure portal (portal.azure.com).
 2) Click on "Create a resource" and search for "App Service".
@@ -82,7 +82,7 @@ Create an App Service:
    
 This method allows you to deploy your Dockerized application to Azure App Service directly through the Azure portal without needing to use the command line.
 
-## screenshot of Game2048
+## This screenshot showcases Game2048 running on Azure App Service.
 
 ![image](https://github.com/satyamaatmdeep10/Game-2048/assets/137147966/3a656e0e-d5b7-4e78-94c9-9dd19a369ef8)
 

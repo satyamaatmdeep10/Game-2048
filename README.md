@@ -53,11 +53,41 @@ Open Google Chrome and navigate to localhost:80 to access the game running local
 
 
 ### Step11 :-
- To deploy your Docker container to Azure:- 
+ To deploy your Docker container to Azure app service:- 
  
+ ### Step A. 
+ Prepare Docker Image: Push your Docker image to a container registry that Azure App Service can access. so first we have created Azure Container Registry and the Steps are:- 
+ Create an Azure Container Registry: Go to the Azure portal, navigate to "Create a resource" > "Containers" > "Azure Container Registry" and follow the prompts to create a new registry.
+ Login On your local machine.
  
+#Command:- 1. az login
+ 2. az Command:- acr login --name <your_registry_name> 
+ 3.Tag your Docker image: Tag your local Docker image with the address of your Azure Container Registry:
+ 4. docker tag your_image_name <your_registry_name>.azurecr.io/your_image_name:tag
+ 5. Push the Docker image to ACR: #docker push <your_registry_name>.azurecr.io/your_image_name:tag
+
+## screenshot
+
+![image](https://github.com/satyamaatmdeep10/Game-2048/assets/137147966/841158c4-ffd1-4334-999f-1a5b3ae23e5b)
+
+### Step B
+Create an App Service:
+1) Go to the Azure portal (portal.azure.com).
+2) Click on "Create a resource" and search for "App Service".
+3) Click on "Create" and fill in the required details like app name, subscription, resource group, etc.
+4) Under "Publish", choose "Docker Container" and select the appropriate options for your container registry and image.
+5) Configure any necessary settings such as environment variables, application settings, or connection strings in the Azure portal under the configuration section for your web app.
+6) Deploy: Click on "Review + create" and then "Create" to deploy your app service.
+7) Verify Deployment: After deployment, visit your web app's URL to verify that your application is running correctly.
+   
+This method allows you to deploy your Dockerized application to Azure App Service directly through the Azure portal without needing to use the command line.
+
+## screenshot of Game2048
+
+![image](https://github.com/satyamaatmdeep10/Game-2048/assets/137147966/3a656e0e-d5b7-4e78-94c9-9dd19a369ef8)
 
 
+The game is running smoothly and plays without any issues.
 
 
 

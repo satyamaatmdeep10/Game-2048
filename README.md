@@ -30,3 +30,40 @@ EXPOSE 80: This line specifies that the container will listen on port 80. This i
 
 ### Step8 :- 
 CMD [ "/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf" ]: This line specifies the command that should be executed when the container starts. It starts the nginx server using the configuration file located at /etc/nginx/nginx.conf.
+
+### Step9 :- 
+
+Then, in the terminal, we need to run Docker commands to build and run the Docker container containing our game.
+
+### Command1 :-
+The command docker build -t 2048-games . builds a Docker image with the tag 2048-games using the Dockerfile located in the current directory (.).
+
+### command2 :-
+The command docker image ls is used to list Docker images stored on your local system. It provides information such as the repository, tag, image ID, and creation time for each image.
+
+### Command3 :-
+The command docker run -d -p 80:80 <image_id> runs a Docker container in detached mode (-d), forwarding port 80 from the host to port 80 in the container (-p 80:80), using the specified Docker image (`
+
+### Step10 :- 
+Open Google Chrome and navigate to localhost:80 to access the game running locally.
+
+### Screenshot of 2048-Game
+
+![image](https://github.com/satyamaatmdeep10/Game-2048/assets/137147966/0219d5f4-b2a5-42ff-936c-3e4b69502069)
+
+
+### Step11 :-
+ To deploy your Docker container to Azure:- 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
